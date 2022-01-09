@@ -1,0 +1,192 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-main: hsl(217, 54%, 11%);
+  --very-dark-blue-card: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+
+  --paragraph: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.card-container{
+  position: relative;
+  display: grid;
+  place-items: center;
+  background-color: var(--very-dark-blue-main);
+  height: 100vh;
+}
+
+.card{
+  display: grid;
+  width: 260px;
+  height: auto;
+  box-shadow: 0 4px 6px black;
+  border-radius: 20px;
+  padding: 24px;
+  place-content: center;
+  background-color: var(--very-dark-blue-card);
+}
+
+.card-content{
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  width: 260px;
+}
+
+.card-image{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 260px;
+}
+
+.card-image .image-equilibrium{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.card-image .image-view{
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: none;
+}
+
+.card-image .image-background{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background-color: var(--cyan);
+  opacity: 50%;
+  display: none;
+}
+
+.card-image:hover{
+  cursor: pointer;
+}
+
+.card-image:hover .image-view{
+  display: block;
+  z-index: 1;
+}
+
+.card-image:hover .image-background{
+  display: block;
+}
+
+.card-text{
+  margin: 24px 0;
+}
+
+.card-text h1{
+  color: var(--white);
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.card-text h1:hover{
+  cursor: pointer;
+  color: var(--cyan);
+}
+
+.card-text p{
+  color: var(--soft-blue);
+  font-size: var(--paragraph);
+}
+
+.card-info{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.card-info-ethereum{
+  display:flex;
+}
+
+.card-info-ethereum img{
+  width: 12px;
+  height: 18px;
+  margin-right: 12px;
+}
+
+.card-info-ethereum p{
+  font-size: var(--paragraph);
+  color: var(--cyan);
+}
+
+.card-info-time{
+  display: flex;
+}
+
+.card-info-time img{
+  width: 18px;
+  height: 18px;
+  margin-right: 12px;
+}
+
+.card-info-time p{
+  font-size: var(--paragraph);
+  color: var(--soft-blue);
+}
+
+.card-creation{
+  display: flex;
+  padding-top: 16px;
+  border-top: 1px solid var(--very-dark-blue-line);
+}
+
+.card-creation img{
+  height: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+  margin-right: 12px;
+}
+
+.card-creation p{
+  font-size: var(--paragraph);
+}
+
+.card-creation p span{
+  color: var(--soft-blue);
+}
+
+.card-creation p a{
+  text-decoration: none;
+  color: var(--white);
+}
+
+.card-creation p a:hover{
+  color: var(--cyan);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--cyan);
+  position: absolute;
+  bottom: 24px;
+}
+
+.attribution a {
+  color: var(--white);
+  text-decoration: none;
+}
